@@ -1,87 +1,116 @@
 <html>
   <head>
-    <title>Form</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+    <title>Form Validation</title>
   </head>
 
-  <body style="background-color: #FFC827">
+  <body>
     <center>
-      <div style="margin: 50px; padding: 10px; border: 1px; border-color: black; border-style: solid;">
+      <form onsubmit="return validateForm();">
         <table>
           <tr>
             <td>Name:</td>
+            <td><input type="text" id="name" /></td>
+          </tr>
 
-            <td><input /></td>
-          </tr>
           <tr>
-            <td>Rollno:</td>
-            <td><input /></td>
+            <td>Roll No:</td>
+            <td><input type="text" id="roll" /></td>
           </tr>
+
           <tr>
             <td>Email:</td>
-            <td><input type="email" /></td>
+            <td><input type="email" id="email" /></td>
           </tr>
+
           <tr>
             <td>Mobile:</td>
-            <td><input /></td>
+            <td><input type="text" id="mobile" /></td>
           </tr>
+
           <tr>
             <td>Gender:</td>
             <td>
-              <input type="radio" name="gender"/>Male
-              <input type="radio" name="gender"/>Female
+              <input type="radio" name="gender" value="Male" id="gender1" />Male
+              <input type="radio"name="gender" value="Female" id="gender2" />Female
             </td>
           </tr>
+
           <tr>
             <td>Department:</td>
             <td>
-              <select>
-                <option value="Computer Science and Engineering">CSE</option>
-                <option value="Information Technology">IT</option>
-                <option value="Artificial Intelligence and Date Science">AIDS</option>
-                <option value="Artificial Intelligence and Machine Learning">AIML</option>
-                <option value="Computer Science and Design">CSD</option>
+              <select id="dept">
+                <option value="">Select Department</option>
+                <option>CSE</option>
+                <option>IT</option>
+                <option>AIDS</option>
+                <option>AIML</option>
+                <option>CSD</option>
               </select>
             </td>
           </tr>
-          <tr>
-            <td>Language Known:</td>
-            <td>
-              <input type="checkbox" value="Tamil" />Tamil
-              <input type="checkbox" value="English" />English
-              <input type="checkbox" value="Telungu" />Telungu
-              <input type="checkbox" value="Hindi" />Hindi
-            </td>
-          </tr>
-          <tr>
-            <td>Address:</td>
-            <td><textarea></textarea></td>
-          </tr>
+
           <tr>
             <td>Password:</td>
-            <td><input type="password" /></td>
+            <td><input type="password" id="password" /></td>
           </tr>
-          <tr>
-            <td>
-              <a href="index.html" target="_blank" style="color: red; text-decoration: none;">Click to See my Profile</a>
-            </td>
-          </tr>
+
           <tr>
             <td><button type="submit">Submit</button></td>
             <td><button type="reset">Reset</button></td>
           </tr>
         </table>
-      </div>
+      </form>
     </center>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+
+    <script>
+      function validateForm() {
+        var name = document.getElementById("name").value;
+        var roll = document.getElementById("roll").value;
+        var email = document.getElementById("email").value;
+        var mobile = document.getElementById("mobile").value;
+        var dept = document.getElementById("dept").value;
+        var password = document.getElementById("password").value;
+        var gender1 = document.getElementById("gender1").checked;
+        var gender2 = document.getElementById("gender2").checked;
+
+        if (name == "") {
+          alert("Name is required");
+          return false;
+        }
+
+        if (roll == "") {
+          alert("Roll Number is required");
+          return false;
+        }
+
+        if (email == "") {
+          alert("Email is required");
+          return false;
+        }
+
+        if (mobile.length != 10 || isNaN(mobile)) {
+          alert("Mobile number must be exactly 10 digits");
+          return false;
+        }
+
+        if (!gender1 && !gender2) {
+          alert("Please select gender");
+          return false;
+        }
+
+        if (dept == "") {
+          alert("Please select a department");
+          return false;
+        }
+
+        if (password.length < 8 || password.length > 30) {
+          alert("Password must be between 8 and 30 characters");
+          return false;
+        }
+
+        alert("Form submitted successfully!");
+        return true;
+      }
+    </script>
   </body>
 </html>
