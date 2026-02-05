@@ -29,35 +29,6 @@ I created this repo to push **small projects, experiments, and practice apps** w
 
 ---
 
-## 📁 Project Structure
-
-Each folder contains one independent project:
-
-```
-project-name/
-│
-├── client/        → React frontend
-├── server/        → Node/Express backend
-├── README.md      → Project explanation
-└── package.json
-```
-
----
-
-## 🛠 Projects List
-
-| No | Project Name | Description | Status |
-|----|-------------|-------------|---------|
-| 1 | Todo App | CRUD with MERN | ✅ |
-| 2 | Auth System | Login/Register + JWT | ✅ |
-| 3 | Notes App | Full CRUD API | 🔄 |
-| 4 | Portfolio API | Backend practice | 🔄 |
-| 5 | Mini E‑commerce | Cart + Orders | ⏳ |
-
-(Add new projects as you build)
-
----
-
 ## 💡 What I’m Learning
 
 - REST APIs
@@ -74,14 +45,14 @@ project-name/
 
 ### Backend
 ```
-cd server
+cd backend
 npm install
 npm start
 ```
 
 ### Frontend
 ```
-cd client
+cd frontend
 npm install
 npm start
 ```
@@ -98,17 +69,6 @@ npm start
 
 ---
 
-## 🔥 Future Plans
-
-- TypeScript
-- Next.js
-- Docker
-- Testing (Jest)
-- CI/CD
-- System design
-
----
-
 ## 🤝 Contributions
 
 This is a personal learning repository.  
@@ -118,8 +78,8 @@ Suggestions and improvements are always welcome!
 
 ## 📬 Connect With Me
 
-GitHub: https://github.com/your-username  
-LinkedIn: Add later
+GitHub: https://github.com/abubackar-siddiq-s 
+LinkedIn: www.linkedin.com/in/abubackar-siddiq
 
 ---
 
