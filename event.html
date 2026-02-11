@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Event Handling</title>
+    <style>
+      div {
+        width: 150px;
+        height: 150px;
+        background-color: black;
+        margin: 10px;
+        padding: 10px;
+        display: inline-block;
+        color: white;
+      }
+    </style>
+  </head>
+  <body onkeypress="press()">
+    <div id="move">Mouse Over</div>
+    <div id="enter">Mouse Enter</div>
+    <div id="out">Mouse Out</div>
+    <div id="click">Click</div>
+    <script>
+      let b = 0;
+      let c = 0;
+
+      const press = () => {
+        alert("Key Pressed!");
+      };
+
+      document.getElementById("move").addEventListener("mousemove", function () {
+          document.getElementById("move").style.backgroundColor = "red";
+        });
+
+      document.getElementById("move").addEventListener("mouseleave", function () {
+          document.getElementById("move").style.backgroundColor = "black";
+        });
+
+      document.getElementById("enter").addEventListener("mouseenter", function () {
+          b++;
+          document.getElementById("enter").innerText = "Mouse Over: " + b;
+        });
+
+      document.getElementById("out").addEventListener("mouseout", function () {
+        c++;
+        document.getElementById("out").innerText = "Mouse Over: " + c;
+      });
+
+      document.getElementById("click").addEventListener("click", function () {
+        document.getElementById("click").style.backgroundColor = "blue";
+      });
+
+      document.getElementById("click").addEventListener("dblclick", function () {
+          document.getElementById("click").style.backgroundColor = "black";
+        });
+    </script>
+  </body>
+</html>

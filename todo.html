@@ -1,7 +1,5 @@
 <html>
-  <head>
-    <title>To Do List</title>
-  </head>
+  <head><title>To Do List</title></head>
   <body>
     <table id="table">
       <tr>
@@ -20,8 +18,7 @@
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         cell1.innerHTML = "<input />";
-        cell2.innerHTML =
-          '<button onclick="deleteRow(this)" style="background-color: red;">Delete</button>';
+        cell2.innerHTML = '<button onclick="deleteRow(this)" style="background-color: red;">Delete</button>';
       }
       function deleteRow(button) {
         var row = button.parentNode.parentNode;
