@@ -14,7 +14,6 @@ I created this repo to push **small projects, experiments, and practice apps** w
 - React.js
 - Node.js
 - HTML, CSS, JavaScript
-- Git & GitHub
 
 ---
 
@@ -25,7 +24,7 @@ I created this repo to push **small projects, experiments, and practice apps** w
 ✔ Understand backend + frontend integration  
 ✔ Improve problem-solving skills  
 ✔ Prepare for placements & internships  
-✔ Become a job-ready Full Stack Developer  
+✔ Become a job-ready Full Stack Developer
 
 ---
 
@@ -41,24 +40,6 @@ I created this repo to push **small projects, experiments, and practice apps** w
 
 ---
 
-## ▶️ How to Run a Project
-
-### Backend
-```
-cd backend
-npm install
-npm start
-```
-
-### Frontend
-```
-cd frontend
-npm install
-npm start
-```
-
----
-
 ## 📈 Progress Strategy
 
 - Build small projects daily
@@ -66,6 +47,17 @@ npm start
 - Improve step-by-step
 - Refactor old code
 - Focus on fundamentals
+
+---
+
+## 🔥 Future Plans
+
+- TypeScript
+- Next.js
+- Docker
+- Testing (Jest)
+- CI/CD
+- System design
 
 ---
 
@@ -78,7 +70,7 @@ Suggestions and improvements are always welcome!
 
 ## 📬 Connect With Me
 
-GitHub: https://github.com/abubackar-siddiq-s 
+GitHub: https://github.com/abubackar-siddiq-s
 LinkedIn: www.linkedin.com/in/abubackar-siddiq
 
 ---
