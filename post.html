@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>POST method</title>
+    <style>
+      tr,
+      td {
+        padding: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Event Handling using POST method</h1>
+    <form action="http://localhost:5000/login" method="post">
+      <table>
+        <tr>
+          <td>Enter your ID:</td>
+          <td><input type="text" name="id" required /></td>
+        </tr>
+        <tr>
+          <td>Enter your name:</td>
+          <td><input type="text" name="name" required /></td>
+        </tr>
+        <tr>
+          <td>Enter your Email:</td>
+          <td><input type="email" name="email" required /></td>
+        </tr>
+        <tr>
+          <td>Enter your Mobile No:</td>
+          <td><input type="text" name="mobile" required /></td>
+        </tr>
+        <tr>
+          <td>Select your City:</td>
+          <td>
+            <select name="dept" value="" required>
+              <option value="">Select City</option>
+              <option value="Software Development">Software Development</option>
+              <option value="Human Resources">Human Resources</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="Technical Support">Technical Support</option>
+              <option value="Project Management">Project Management</option>
+              <option value="Quality Assurance">Quality Assurance</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Select your Gender:</td>
+          <td>
+            <input type="radio" name="gender" value="male" required />Male
+            <input type="radio" name="gender" value="female" required />Female
+          </td>
+        </tr>
+        <tr>
+          <td>Date of Join:</td>
+          <td><input type="date" name="date" required /></td>
+        </tr>
+        <tr>
+          <td>
+            <button type="submit" name="login">Submit</button>
+          </td>
+          <td>
+            <button type="reset" name="reset">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
