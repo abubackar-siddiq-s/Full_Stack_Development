@@ -11,13 +11,14 @@ function post(req, res) {
   });
   req.on("end", function () {
     var qs = querystring.parse(datas);
-    var id = qs.id;
+    var id = qs["id"];
     var name = qs.name;
-    var email = qs.email;
-    var mobile = qs.mobile;
-    var department = qs.dept;
-    var gender = qs.gender;
-    var doj = qs.date;
+    var email = qs["email"];
+    var mobile = qs["mobile"];
+    var department = qs["dept"];
+    var gender = qs["gender"];
+    var doj = qs["date"];
+    res.write("------------Post Method------------\n\n");
     res.write("ID: " + id + "\n\n");
     res.write("Name: " + name + "\n\n");
     res.write("Email: " + email + "\n\n");

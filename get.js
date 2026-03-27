@@ -2,7 +2,7 @@ var http = require("http");
 var url = require("url");
 var querystring = require("querystring");
 
-const post = (req, res) => {
+const get = (req, res) => {
   var path = url.parse(req.url).pathname;
   var query = url.parse(req.url).query;
   var qs = querystring.parse(query);
@@ -13,6 +13,7 @@ const post = (req, res) => {
   var department = qs["dept"];
   var gender = qs["gender"];
   var doj = qs["date"];
+  res.write("------------Get Method------------\n\n");
   res.write("ID: " + id + "\n\n");
   res.write("Name: " + name + "\n\n");
   res.write("Email: " + email + "\n\n");
@@ -23,6 +24,6 @@ const post = (req, res) => {
   res.end();
 };
 
-http.createServer(post).listen(8000, () => {
+http.createServer(get).listen(8000, () => {
   console.log("Server running at http://localhost:8000/");
 });
