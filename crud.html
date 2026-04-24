@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body>
+    <center>
+        <h4>Event Registration</h4>
+        <form action="http://localhost:5500/register" method="POST">
+            Name: <input type="text" name="name" required><br><br>
+            Number: <input type="text" name="number" required><br><br>
+            Email: <input type="email" name="email" required><br><br>
+            Gender:
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+            <br><br>
+            Address:<br>
+            <textarea name="address"></textarea><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <h4> Update Email & Address</h4>
+        <form action="http://localhost:5500/update" method="POST">
+            Number: <input type="text" name="number" required><br><br>
+            New Email: <input type="email" name="email"><br><br>
+            New Address:<br>
+            <textarea name="address"></textarea><br><br>
+            <button type="submit">Update</button>
+        </form>
+        <h4> View Users</h4>
+        <a href="http://localhost:5500/users">Show All Users</a>
+    </center>
+</body>
+
+</html>
