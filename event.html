@@ -13,11 +13,12 @@
       }
     </style>
   </head>
-  <body onkeypress="press()">
-    <div id="move">Mouse Over</div>
+  <body onload="alert('Hello, Welcome')" onkeypress="press()">
+    <div id="move">Mouse Move</div>
     <div id="enter">Mouse Enter</div>
     <div id="out">Mouse Out</div>
     <div id="click">Click</div>
+    <input type="text" id="submit" placeholder="Hey Come Here">
     <script>
       let i = 0;
       let j = 0;
@@ -25,6 +26,14 @@
       const press = () => {
         alert("Key Pressed!");
       };
+
+      document.getElementById("submit").addEventListener("focus", function () {
+        document.getElementById("submit").style.backgroundColor = "green";
+      });
+
+      document.getElementById("submit").addEventListener("blur", function () {
+        document.getElementById("submit").style.backgroundColor = "red";
+      });
 
       document.getElementById("move").addEventListener("mousemove", function () {
           document.getElementById("move").style.backgroundColor = "red";

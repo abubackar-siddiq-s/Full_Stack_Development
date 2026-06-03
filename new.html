@@ -1,13 +1,13 @@
 <html>
-  <head>
-    <title>Vote For a post</title>
-  </head>
-  <body>
-    <h1 id="time"></h1>
-    <script>
-      let now = new Date();
-      document.getElementById("time").innerText = now;
-
-    </script>
-  </body>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">Hi</h1>  
+    <button onclick="alert('Hi ' + username)">Click Me</button>
+</body>
+<script>
+    let username = prompt("What is your name?");
+    document.getElementById("demo").innerHTML = "Hello " + username;
+</script>
 </html>

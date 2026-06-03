@@ -19,8 +19,8 @@ function App() {
 
             <h1>List 2:</h1>
             <ul>
-                {list2.map((item, index) => (
-                    <li key={index}>{item}</li>
+                {list2.map((item) => (
+                    <li>{item}</li>
                 ))}
             </ul>
 

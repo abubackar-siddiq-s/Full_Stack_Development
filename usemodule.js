@@ -1,4 +1,5 @@
-const   mymodule = require('./module.js');
+const mymodule = require('./module.js');
 
 console.log(mymodule.add(5, 3));
 console.log(mymodule.greet());
+console.log(mymodule.pi);

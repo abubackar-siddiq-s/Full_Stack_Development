@@ -7,8 +7,8 @@ const storage = multer.diskStorage({
   destination: function (req, file, callback) {
     callback(null, "./uploads");
   },
-  filename: function (req, file, callback) {
-    callback(null, Date.now() + "-" + file.originalname);
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + "-" + file.originalname);
   }
 });
 
@@ -20,7 +20,7 @@ const upload = multer({
 app.get("/", (req, res) => {
   res.send(`
     <h1>Upload Your File</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
+    <form action="https://localhost:3000/upload" method="post" enctype="multipart/form-data">
       <input type="file" name="file" />
       <button type="submit">Upload</button>
     </form>

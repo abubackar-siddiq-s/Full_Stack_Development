@@ -63,3 +63,97 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState, useEffect } from "react";
+
+function App() {
+  const [color, setColor] = useState("--------");
+  const [inputColor, setInputColor] = useState("");
+
+  useEffect(() => {
+    document.title = "Color: " + color;
+  }, [color]);
+
+  return (
+    <div
+      style={{
+        backgroundColor: color.toLowerCase(),
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <h1>My Favourite Color is: {color}</h1>
+
+      <p>Select your favourite color:</p>
+
+      <button onClick={() => setColor("Red")}>Red</button>
+      <br />
+
+      <button onClick={() => setColor("Blue")}>Blue</button>
+      <br />
+
+      <button onClick={() => setColor("Pink")}>Pink</button>
+      <br />
+
+      <button onClick={() => setColor("Green")}>Green</button>
+      <br />
+
+      <button onClick={() => setColor("Yellow")}>Yellow</button>
+      <br />
+
+      <button onClick={() => setColor("Purple")}>Purple</button>
+
+      <p>(or)</p>
+
+      <input
+        placeholder="Enter your Favorite Color"
+        value={inputColor}
+        onChange={(e) => setInputColor(e.target.value)}
+      />
+      <br />
+
+      <button onClick={() => setColor(inputColor)}>
+        Set Color
+      </button>
+    </div>
+  );
+}
+
+export default App;

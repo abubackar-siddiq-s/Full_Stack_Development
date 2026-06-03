@@ -3,7 +3,6 @@ var url = require("url");
 var querystring = require("querystring");
 
 const get = (req, res) => {
-  var path = url.parse(req.url).pathname;
   var query = url.parse(req.url).query;
   var qs = querystring.parse(query);
   var id = qs["id"];

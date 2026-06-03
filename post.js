@@ -3,7 +3,6 @@ var url = require("url");
 var querystring = require("querystring");
 
 function post(req, res) {
-  var path = url.parse(req.url).pathname;
   var query = url.parse(req.url).query;
   var datas = "";
   req.on("data", function (chunk) {

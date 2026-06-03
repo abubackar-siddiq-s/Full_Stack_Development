@@ -1,5 +1,5 @@
-var http = require('http');
-var url = require('url');
+const http = require('http');
+const url = require('url');
 
 function app(req, res) {
   if (req.url === "/") {
@@ -18,5 +18,6 @@ function app(req, res) {
   res.end();
 }
 
-http.createServer(app).listen(3000);
-console.log('Server is running on http://localhost:3000');
+http.createServer(app).listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
+});

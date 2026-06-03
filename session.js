@@ -17,12 +17,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/view', (req, res) => {
-    res.send(`Session Value: ${req.session.name}`);
+    res.send(`<h1>Session Value: ${req.session.name}</h1>`);
 });
 
 app.get('/clear', (req, res) => {
     req.session.destroy((err) => {
-        res.send('Session has been cleared');
+        res.send('<h1>Session has been cleared</h1>');
     });
 });
 
